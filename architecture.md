@@ -16,7 +16,13 @@ Demo market: France, because `recherche-entreprises.api.gouv.fr` and Pappers exp
 
 ## 2. Control-flow decision
 
-**Your own code controls the flow, not the LLM.** For every candidate company, the orchestrator *always* calls all three signal-gathering agents, *always* in parallel. The LLM is used only for the two steps that genuinely need judgment:
+**Your own code controls the flow, not the LLM.** 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!THIS IS GOING TO CHANGE !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+For every candidate company, the orchestrator *always* calls all three signal-gathering agents, *always* in parallel. The LLM is used only for the two steps that genuinely need judgment:
 
 1. Extracting "exploring strategic alternatives"-type language out of messy press text (Press Agent).
 2. Writing the human-readable rationale in the Scoring Agent, grounded strictly in the structured facts already computed.
