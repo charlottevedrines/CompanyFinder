@@ -25,12 +25,15 @@ FENETRE_RECENTE_ANNEES = 2
 # Les roles qui nous interessent, du plus important au moins important.
 ROLES_PRIORITAIRES = [
     "president",
+    "president directeur general",
     "directeur general",
+    "directeur general delegue",
+    "directeur general unique",
     "gerant",
-    "administrateur",
-    "commissaire aux comptes",
+    "co gerant",
+    "president du directoire",
+    "membre du directoire",
 ]
- 
  
 # ---------------------------------------------------------------------------
 # Petits utilitaires
