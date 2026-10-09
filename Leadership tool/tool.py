@@ -90,15 +90,15 @@ def enrich_company(company: dict) -> dict:
     }
  
  
-def run_tool(input_path: str, output_path: str):
-    """Lit le fichier d'entree, enrichit chaque entreprise, ecrit le resultat."""
+def run_tool(companies: list[dict]) -> list[dict]:
+    """Enrich each company and return the results."""
+    return [enrich_company(company) for company in companies]
+
+def run_tool_from_file(input_path: str, output_path: str):
     companies = load_input(input_path)
- 
-    results = []
-    for company in companies:
-        results.append(enrich_company(company))
- 
-    Path(output_path).write_text(
-        json.dumps(results, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    results = run_tool(companies)
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, ensure_ascii=False, indent=2)
+
+    return results
