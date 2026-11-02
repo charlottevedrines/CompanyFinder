@@ -24,6 +24,3 @@ project/\
 └── tests/\
     └── ...\
 
-### Scope of the project: 
-- Company type: ESN
-- Country: France
